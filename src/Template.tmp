@@ -1,0 +1,24 @@
+<?php
+namespace {Namespace};
+
+use ArchitectModel\MySQL;
+
+class {Table} extends MySQL	{
+    protected static $jsonArrayMode = true;
+	protected static $table = "{Table}";
+	protected static $fields = {Fields};
+	protected static $pk = {PrimaryKey};
+	protected static $autoIndexField = {AutoInc};
+
+    protected function formatToDB(): array  {
+        $output = $this->data;
+        // FormatToDB
+        // FormatToDBEnd
+        return $output;
+    }
+    
+    protected function formatFromDB(array &$row): void  {
+        // FormatFromDB
+        // FormatFromDBEnd
+    }
+}

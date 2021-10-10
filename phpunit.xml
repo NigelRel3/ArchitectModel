@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" backupGlobals="false" backupStaticAttributes="false" colors="true" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" processIsolation="true" stopOnFailure="false" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+  <coverage processUncoveredFiles="true">
+    <include>
+      <directory suffix=".php">./src</directory>
+    </include>
+    <exclude>
+      <directory suffix=".php">./vendor</directory>
+    </exclude>
+    <report>
+      <html outputDirectory="./log" lowUpperBound="35" highLowerBound="70"/>
+    </report>
+  </coverage>
+  <logging/>
+  <testsuites>
+    <testsuite name="Model">
+      <directory suffix="Test.php">./test</directory>
+    </testsuite>
+  </testsuites>
+  <php>
+    <env name="BASEDIR" value="./tests"/>
+    <env name="DB_HOST" value="172.17.0.4"/>
+    <env name="DB_USER" value="whTest"/>
+    <env name="DB_PASSWD" value="L4JUEB4OcKQhCs2c"/>
+    <env name="DB_DBNAME" value="whTest"/>
+    <env name="JWT_SECRET" value="1234abc1"/>
+    <env name="PERFORMANCE" value="1"/>
+    <env name="PERFORMANCE_LOG" value="../log/logPerf.log"/>
+  </php>
+</phpunit>

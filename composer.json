@@ -1,0 +1,19 @@
+{
+	"name" : "nigelrel3/architectmodel",
+	"description" : "Database model",
+	"type" : "project",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Nigel Rel",
+			"email" : "nigelrel3@yahoo.co.uk"
+		}
+	],
+	"require" : {
+		"vlucas/phpdotenv" : "~5.3"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"ArchitectModel\\" : "src"
+		}
+	}
+}
